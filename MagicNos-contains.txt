@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class NewMain {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int t,i;
+        String s1,s2;
+        char[] s3 = new char[501]; 
+        t= sc.nextInt();
+        while(t!=0){
+            int cnt =0,clk=0;
+        s1 = sc.next();
+        s2 = sc.next();
+        s3 = s1.toCharArray();
+        int k = s3.length;
+        if(s2.length()>s1.length()){
+        clk = s2.length()-s1.length();
+        }
+        for(i=0;i<k;i++){
+        if( !s2.contains(s1.subSequence(i, i+1))){
+        cnt++;
+        } 
+          }
+        System.out.println(cnt+clk);
+        
+        }
+        
+        }
+}
