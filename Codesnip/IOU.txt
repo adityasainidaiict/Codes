@@ -1,0 +1,16 @@
+Let f[i][j] = how many money i owes j
+
+#It can be proved we only need to loop n times.
+
+Loop n times do:
+
+For i,j,k in [1..n]
+
+    If f[i][j]>0 and f[j][k]>0 then
+
+       Let  delta = min (f[i][j], f[j][k])
+
+       Decrease f[i][j] and f[j][k] by delta
+
+       Increase f[i][k] by delta
+Answer will be sum{f[i][j]}
